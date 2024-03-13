@@ -15,7 +15,7 @@
 
         <ul>
             <li v-for="(todo,index) in toDos" :class="{done: todo.done}">
-                <span>
+                <span @click="toggleDone(index)">
                     {{todo.text}}
                 </span>
                 <button @click="remove(index)">
@@ -23,6 +23,7 @@
                 </button>
             </li>
         </ul>
+
     </div>
     
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

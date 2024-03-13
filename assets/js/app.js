@@ -34,5 +34,8 @@ createApp({
             };
             text !== null ? (this.toDos.push(newToDo), this.message = null) : null;
         },
+        toggleDone(index) {
+            this.toDos[index].done === false ? this.toDos[index].done = true : this.toDos[index].done === true ? this.toDos[index].done = false : null
+        },
     }
 }).mount('#app')
