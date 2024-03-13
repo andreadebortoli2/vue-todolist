@@ -9,6 +9,10 @@
 <body>
     
     <div id="app">
+
+        <input type="text" v-model="message" placeholder="write your to-do">
+        <button @click="addToDoList(message)">Add</button>
+
         <ul>
             <li v-for="(todo,index) in toDos" :class="{done: todo.done}">
                 <span>
