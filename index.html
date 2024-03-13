@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    
+
     <div id="app">
 
-        <input type="text" v-model="message" placeholder="write your to-do" @keyup.enter="addToDoList(message)">
-        <button @click="addToDoList(message)">Add</button>
+        <div class="container">
 
-        <ul>
-            <li v-for="(todo,index) in toDos" :class="{done: todo.done}">
-                <span @click="toggleDone(index)">
-                    {{todo.text}}
-                </span>
-                <button @click="remove(index)">
-                    &cross;
-                </button>
-            </li>
-        </ul>
+            <div class="add_todo">
+                <input type="text" v-model="message" placeholder="write your to-do" @keyup.enter="addToDoList(message)">
+                <button class="add_btn" @click="addToDoList(message)">Add</button>
+            </div>
+
+            <ul>
+                <li v-for="(todo,index) in toDos">
+                    <div :class="{done: todo.done}" @click="toggleDone(index)">
+                        {{todo.text}}
+                    </div>
+                    <button @click="remove(index)">
+                        &cross;
+                    </button>
+                </li>
+            </ul>
+
+        </div>
 
     </div>
-    
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
+
 </html>

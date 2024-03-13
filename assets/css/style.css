@@ -5,7 +5,57 @@
     /* border: 1px dashed deepskyblue; */
 }
 
-
+/* Utility */
 .done {
-    text-decoration: line-through;
+    text-decoration: orangered line-through;
+    text-decoration-thickness: 3px;
+}
+
+/* App */
+body {
+    height: 100vh;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.container {
+    width: 500px;
+    height: 800px;
+    overflow-y: auto;
+    background-color: paleturquoise;
+    padding: 2rem;
+
+    .add_todo {
+        display: flex;
+        justify-content: space-between;
+
+        & input,
+        .add_btn {
+            padding: 0.5rem 2rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    & ul {
+        padding: 2rem;
+    }
+
+    & li {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        line-height: 50px;
+        font-size: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &>button {
+            padding: 0.2rem;
+            font-size: 2rem;
+            color: orangered;
+        }
+    }
 }

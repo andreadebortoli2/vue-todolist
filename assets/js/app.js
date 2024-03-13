@@ -8,15 +8,23 @@ createApp({
             toDos: [
                 {
                     text: 'MILESTONE 1',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'MILESTONE 2',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'MILESTONE 3',
-                    done: false,
+                    done: true,
+                },
+                {
+                    text: 'Bonus 1',
+                    done: true,
+                },
+                {
+                    text: 'Bonus 2',
+                    done: true,
                 },
             ],
             message: null,
@@ -28,14 +36,11 @@ createApp({
             this.toDos.splice(index,1)
         },
         addToDoList(text){
-            const newToDo = {
-                text: text,
-                done: false,
-            };
+            const newToDo = {text: text, done: false};
             text !== null ? (this.toDos.push(newToDo), this.message = null) : null;
         },
         toggleDone(index) {
             this.toDos[index].done === false ? this.toDos[index].done = true : this.toDos[index].done === true ? this.toDos[index].done = false : null
         },
-    }
+    },
 }).mount('#app')
