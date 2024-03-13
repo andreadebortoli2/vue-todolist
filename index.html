@@ -10,7 +10,14 @@
     
     <div id="app">
         <ul>
-            <li v-for="todo in toDos" :class="{done: todo.done}">{{todo.text}}</li>
+            <li v-for="(todo,index) in toDos" :class="{done: todo.done}">
+                <span>
+                    {{todo.text}}
+                </span>
+                <button @click="remove(index)">
+                    &cross;
+                </button>
+            </li>
         </ul>
     </div>
     
