@@ -8,10 +8,11 @@
 </head>
 <body>
     
-    
-    <div id="app">{{ message }}</div>
-    
-    
+    <div id="app">
+        <ul>
+            <li v-for="todo in toDos" :class="{done: todo.done}">{{todo.text}}</li>
+        </ul>
+    </div>
     
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/app.js"></script>

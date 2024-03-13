@@ -2,5 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px dashed deepskyblue;
+    /* border: 1px dashed deepskyblue; */
+}
+
+
+.done {
+    text-decoration: line-through;
 }
