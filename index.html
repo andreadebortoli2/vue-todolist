@@ -10,7 +10,7 @@
     
     <div id="app">
 
-        <input type="text" v-model="message" placeholder="write your to-do">
+        <input type="text" v-model="message" placeholder="write your to-do" @keyup.enter="addToDoList(message)">
         <button @click="addToDoList(message)">Add</button>
 
         <ul>

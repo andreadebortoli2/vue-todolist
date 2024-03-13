@@ -32,7 +32,7 @@ createApp({
                 text: text,
                 done: false,
             };
-            text !== '' ? (this.toDos.push(newToDo), this.message = '') : null;
+            text !== null ? (this.toDos.push(newToDo), this.message = null) : null;
         },
     }
 }).mount('#app')
